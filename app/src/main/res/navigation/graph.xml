@@ -1,6 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto"
-             android:id="@+id/graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph"
+    app:startDestination="@id/home2">
 
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.propertease.home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_info2"
+            app:destination="@id/info2" />
+        <action
+            android:id="@+id/action_home2_to_notification"
+            app:destination="@id/notification" />
+        <action
+            android:id="@+id/action_home2_to_valueformoney"
+            app:destination="@id/valueformoney" />
+        <action
+            android:id="@+id/action_home2_to_packing"
+            app:destination="@id/packing" />
+        <action
+            android:id="@+id/action_home2_to_property"
+            app:destination="@id/property" />
+        <action
+            android:id="@+id/action_home2_to_verified"
+            app:destination="@id/verified" />
+        <action
+            android:id="@+id/action_home2_to_post"
+            app:destination="@id/post" />
+        <action
+            android:id="@+id/action_home2_to_premium"
+            app:destination="@id/premium" />
+        <action
+            android:id="@+id/action_home2_to_advice"
+            app:destination="@id/advice" />
+    </fragment>
+    <fragment
+        android:id="@+id/notification"
+        android:name="com.example.propertease.notification"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/info2"
+        android:name="com.example.propertease.info"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_info2_to_linktree"
+            app:destination="@id/linktree" />
+    </fragment>
+    <fragment
+        android:id="@+id/linktree"
+        android:name="com.example.propertease.linktree"
+        android:label="fragment_linktree"
+        tools:layout="@layout/fragment_linktree" />
+    <fragment
+        android:id="@+id/valueformoney"
+        android:name="com.example.propertease.valueformoney"
+        android:label="fragment_valueformoney"
+        tools:layout="@layout/fragment_valueformoney" />
+    <fragment
+        android:id="@+id/packing"
+        android:name="com.example.propertease.packing"
+        android:label="fragment_packing"
+        tools:layout="@layout/fragment_packing" />
+    <fragment
+        android:id="@+id/property"
+        android:name="com.example.propertease.property"
+        android:label="fragment_property"
+        tools:layout="@layout/fragment_property" />
+    <fragment
+        android:id="@+id/verified"
+        android:name="com.example.propertease.verified"
+        android:label="fragment_verified"
+        tools:layout="@layout/fragment_verified" />
+    <fragment
+        android:id="@+id/post"
+        android:name="com.example.propertease.post"
+        android:label="fragment_post"
+        tools:layout="@layout/fragment_post" >
+        <action
+            android:id="@+id/action_post_to_premium"
+            app:destination="@id/premium" />
+    </fragment>
+    <fragment
+        android:id="@+id/premium"
+        android:name="com.example.propertease.premium"
+        android:label="fragment_premium"
+        tools:layout="@layout/fragment_premium" />
+    <fragment
+        android:id="@+id/advice"
+        android:name="com.example.propertease.advice"
+        android:label="fragment_advice"
+        tools:layout="@layout/fragment_advice" >
+        <action
+            android:id="@+id/action_advice_to_quere"
+            app:destination="@id/quere" />
+    </fragment>
+    <fragment
+        android:id="@+id/quere"
+        android:name="com.example.propertease.quere"
+        android:label="fragment_quere"
+        tools:layout="@layout/fragment_quere" />
 </navigation>
